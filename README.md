@@ -97,6 +97,12 @@ La plupart des services utilisés dans cette pipeline étaient nouveaux j'ai don
 
 <!-- USAGE EXAMPLES -->
 # ToDo
+- réfléchir sur le déploiement de la solution (vpn pour hébergement au pôle, répartition des services ?)
+- côté voiture problème actualisation de l’IP (via modification du code, serveur DNS, Système de shakehand) 
+- Implémenter le DB connector 
+- Configurer un panel par défaut au premier démarrage
+- Faire un meilleur système de correspondance adresse CAN nom de variable
+- Test de charge réseau
 
 
 

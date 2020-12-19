@@ -3,7 +3,9 @@ import sys
 from time import sleep
 from json import dumps
 from kafka import KafkaProducer
-values = ["vitesse","conso"]
+from DataEditorPE import variableExporter as importer
+
+values = importer()
 
 while True:
 
@@ -23,7 +25,7 @@ while True:
     while True:
         data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
         data = pickle.loads(data)
-        vals = {values[index] : data[index] for index in range(len(data))}
+        vals = {values[index] : data[index] for index in range(min(len(data),values))}
         producer.send("PE",value=vals)
         
 

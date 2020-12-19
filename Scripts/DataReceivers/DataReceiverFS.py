@@ -3,9 +3,10 @@ import sys
 from time import sleep
 from json import dumps
 from kafka import KafkaProducer
+from DataEditorFS import variableExporter as importer
 
 
-values = ["timestamp","VR1","VR2","VR3","VR4","V","TR1","TR2","TR3","TR4","TM1","TM2","TM3","TM4","V1","V2","V3","V4","V5","V6","V7","V8","V9","VS","C1","C2","C3","C4","C5","C6","C7","C8","C9","CS","T1","T2","T3","T4","T5","T6","T7","T8","T9","TS","Long","Lat"]
+values = importer()
 
 while True:
 
